@@ -8,13 +8,13 @@ export default function Addtodo({ submitHandler }){
     }
     return (
         <View >
-            <Text style={styles.item}>Enter your today's activity:</Text>
+            <Text style={styles.item}>Enter your today's task:</Text>
             <TextInput 
             style={styles.input}
-            placeholder='type new activity ....'
+            placeholder='type new task ....'
             onChangeText={changeHandler}
             />
-            <Button onPress={() => submitHandler(text)} color= 'coral' title='Add'/>
+            <Button onPress={() => submitHandler(text)} color= 'coral' title='add task'/>
         </View>
     )
 }

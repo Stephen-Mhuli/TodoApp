@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList, Alert } from 'react-native';
 import Header from './components/Header';
 import TodoItem from './components/TodoItem';
 import Addtodo from './components/Addtodo';
@@ -30,12 +30,17 @@ export default function App() {
   }
 
   const submitHandler = (text) => {
-    setTodos((prevTodos)=>{
-      return [
-        {text: text, key: Math.random().toString()},
-        ...prevTodos
-      ];
-    })
+
+    if(text.length > 2){
+      setTodos((prevTodos)=>{
+        return [
+          {text: text, key: Math.random().toString()},
+          ...prevTodos
+        ];
+      })
+    }else{
+      Alert.alert('OOPS!', 'Task must be atleast 3 characters long')
+    }
   }
 
   return (
@@ -44,7 +49,7 @@ export default function App() {
       <View style={styles.content}>
         <Addtodo submitHandler={submitHandler}/>
         <View style={styles.list}>
-          <Text>Note: You can delete an activity  by clicking it</Text>
+          <Text>Note: You can delete an task  by clicking it</Text>
           <FlatList 
           data={todos}
           renderItem={( {item} ) => (
