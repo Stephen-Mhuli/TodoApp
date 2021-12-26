@@ -46,7 +46,6 @@ export default function App() {
           <View style={styles.content}>
           <Addtodo submitHandler={submitHandler}/>
             <View style={styles.list}>
-              <Text>Note: You can delete an task  by clicking it</Text>
           <FlatList 
           data={todos}
           renderItem={( {item} ) => (
