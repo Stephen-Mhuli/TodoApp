@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A simple Todo App which used to add daily tasks and delete them ,build for android by using react native",
+    "githubUrl": "https://github.com/Stevo237/TodoApp"
   }
 }
