@@ -1,5 +1,5 @@
 # TodoApp
-my TODO list app with react native
+## Simple TODO app with react native
 
  Practicing  the basics like core components
 like Text, View, StyleSheet, Button, ScrollView, FlatList, TouchableOpacity and TextInput.
